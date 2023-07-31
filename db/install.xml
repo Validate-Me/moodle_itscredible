@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/certificate_selector/db" VERSION="20220101" COMMENT="XMLDB file for Moodle blocks/slack" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd">
+
+    <TABLES>
+        <TABLE NAME="course_template" COMMENT="Table for storing course templates">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" AUTO_INCREMENT="true" COMMENT="Primary key" SEQUENCE="true"/>
+                <FIELD NAME="courseid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" COMMENT="Course ID"/>
+                <FIELD NAME="templateid" TYPE="text" LENGTH="255" NOTNULL="false" COMMENT="Template ID"/>
+                <FIELD NAME="thumbnail_url" TYPE="text" LENGTH="255" NOTNULL="false" COMMENT="Thumbnail URL"/>
+                <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="false" UNSIGNED="true" COMMENT="Time created"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+                <KEY NAME="courseid" TYPE="unique" FIELDS="courseid"/>
+            </KEYS>
+        </TABLE>
+    </TABLES>
+
+</XMLDB>
